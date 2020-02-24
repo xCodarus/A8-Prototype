@@ -11,7 +11,7 @@ $(document).ready(function() {
  */
 function initializePage() {
 	console.log("yes");
-	$.get("https://localhost:3000/user", updateImage);
+	$.get("https://a8-prototype.herokuapp.com/user", updateImage);
 }
 
 /*
