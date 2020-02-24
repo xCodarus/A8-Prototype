@@ -15,6 +15,8 @@ var friends = require('./routes/friends');
 var shared = require('./routes/shared');
 var login = require('./routes/login');
 var add = require('./routes/add');
+var update = require('./routes/update');
+var user = require('./routes/user');
 // Example route
 // var user = require('./routes/user');
 
@@ -47,6 +49,8 @@ app.get('/friends', friends.view);
 app.get('/shared/:name', shared.viewProject);
 app.get('/login', login.auth);
 app.get('/add', add.addFriend);
+app.get('/update', update.updateUser);
+app.get('/user', user.getUser);
 
 // Example route
 // app.get('/users', user.list);

@@ -1,11 +1,11 @@
 var data = require('../users.json');
 
-exports.userInfo = function(request, response) { 
+exports.getUser = function(request, response) { 
+		// Your code goes here
 	for (i=0; i < data.users.length; i++) {
 		if (data.users[i].isUser == true) {
-			var user = data.users[i];
+			var thisUser = data.users[i];
+			response.json(thisUser);
 		}
-	console.log(user);
-  	response.json(user);
-  }
+	}
 }
