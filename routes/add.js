@@ -15,8 +15,7 @@ exports.addFriend = function(request, response) { 
 	}
 	if (friendCheck == false) {
 		data.users.push(newFriend);
-		response.render('friends', data);
 	}
-	break;
+	response.render('friends', data);
 }
  
