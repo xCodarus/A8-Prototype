@@ -7,43 +7,50 @@
 
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.css" rel="stylesheet">
-	<link href="css/plant.css" rel="stylesheet">
+    <link href="css/newCSS.css" rel="stylesheet">
 </head>
 <body>
-	<div class = "container">
-		<h2><i class="arrow leftArrow" onclick="history.back(-1)"></i>Friend List</h2>
-		<hr size="30">
+	  <div class="text-center">
+	  	<div class="col">
+      		<h1><i class="paddingThatArrow glyphicon glyphicon-arrow-left" onclick="history.back(-1)"></i>Sip</h1>
+    	</div>
+		<hr>
 
-		<div class="friend-list">
-			<div class="friendBorder">
-			<form id="addFriendForm" role="form" method="get" action="/add">
-			<h3>Add a Friend</h3>
-	    	<div class="form-group">
-	      	<input type="text" class="form-control" id="name" placeholder="Name" name="name">
-	      	</div>
-	    	<input type="submit" id="submitBtn" class="btn btn-default" value="Add"></input>
-	    </div>
-	    </form>
-			{{#each users}}
+		<!-- beginning friend list -->
+			<div class="friend-list">
+					<div class = "friendContainer">
+					<form id="addFriendForm" role="form" method="get" action="/add">
+					<h3>Add a Friend</h3>
+	    			<div class="form-group">
+	      				<input type="text" class="form-control" id="name" placeholder="Name" name="name">
+	      			</div>
+	    			<input type="submit" id="submitBtn" class="btn btn-default" value="Add"></input>
+	    			</form>
+				{{#each users}}
 				{{#if isUser}}
-
 
 				{{else}}
 				<div onclick="location.href= '/shared/{{name}}' ">
-					<h3 class="friend" style="float: left;">
-						{{name}}  <img class="friend-pager" style="padding: 20px;" src="/images/plant.png" ... />
+					<h3 style="float: left;">
+						{{name}} <img class="friend-pager" style="padding: 20px;" src="/images/seed.png" ... />
 					</h3>
-				</div>
 				{{/if}}
-			{{/each}}
+				{{/each}}
+				</div>
+			</div>
 		</div>
 
 
 
-		<div class="btn-group" style="width:100%">
-      		<a href="sip"><button class="fillbtn" style="width:19%">Sip</button></a>
-      		<a href="friends"><button class="filltbn" style="width:19%">Friends</button></a>
-  		</div>
+
+	  <nav class="borderingNav navbar navbar-default navbar-fixed-bottom" style="background: #D5DFB9">
+      <div class = "row">
+        
+          <a href="/sip"><button type="button" class="thatPadding btn navbar-btn button1 col-md-6 col-sm-6 col-xs-6">Sip</button></a>
+          <a href="/friends"><button type="button" class="thatPadding btn navbar-btn button1 col-md-6 col-sm-6 col-xs-6">Friends</button></a>
+  </nav>
+
+
 	</div>
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src= "js/bootstrap.js"></script>
