@@ -11,7 +11,6 @@ exports.addFriend = function(request, response) { 
 	for (i=0; i < data.users.length; i++) {
 		if (data.users[i].name == newFriend.name) {
 			var friendCheck = true;
-			alert("User is already added!");
 		}
 	}
 	if (friendCheck == false) {

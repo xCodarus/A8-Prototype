@@ -11,7 +11,7 @@ $(document).ready(function() {
  */
 function initializePage() {
 	console.log("yes");
-	$.get("https://a8-prototype.herokuapp.com/user", updateImage);
+	$.get('user', updateImage);
 }
 
 /*
@@ -20,6 +20,6 @@ function initializePage() {
 function updateImage(result) {
 	console.log(result);
 	var countNumber = result["growth"];
-	var projectHTML = "<img src='/images/Cup" + countNumber + ".png' style='width:40%' ... />";
+	var projectHTML = "<img src='../images/Cup" + countNumber + ".png' style='width:40%' ... />";
 	$('.sip-tracker').html(projectHTML);
 }
