@@ -9,27 +9,32 @@
 
   <link href="css/bootstrap.css" rel="stylesheet">
   <link href="css/bootstrap-theme.css" rel="stylesheet">
-  <link href="css/archive.css" rel="stylesheet">
+  <link href="css/newCSS.css" rel="stylesheet">
 
 </head>
 <body>
-  <div class = "container">
-    <h2><i class="arrow leftArrow" onclick="history.back(-1)"></i>Archive</h2>
-    <hr size="30">
+    <div class="text-center">
+    <div class="col">
+          <h1><i class="paddingThatArrow glyphicon glyphicon-arrow-left" onclick="history.back(-1)"></i>Archive</h1>
+      </div>
+      <hr>
+
+<div class = "friendContainer">
     <div class = "shelf">
-        <img src = "https://i.imgur.com/TdhrOfH.png">
+        <img style="width: 500px; height: 100px;" src = "https://i.imgur.com/TdhrOfH.png">
         <div class = "prize">
             <img src = "https://i.imgur.com/KOBdr76.png">
         </div>
-        <img src = "https://i.imgur.com/TdhrOfH.png">
-        <img src = "https://i.imgur.com/TdhrOfH.png">
+        <img style="width: 500px; height: 100px;" src = "https://i.imgur.com/TdhrOfH.png">
+        <img style="width: 500px; height: 100px;" src = "https://i.imgur.com/TdhrOfH.png">
     </div>
 
-  <div class="btn-group" style="width:100%">
-      <a href="sip"><button style="width:19%">Sip</button></a>
-      <a href="friends"><button style="width:19%">Friends</button></a>
-  </div>
-  
+  <nav class="borderingNav navbar navbar-default navbar-fixed-bottom" style="background: #D5DFB9">
+      <div class = "row">
+        
+          <a href="/sip"><button type="button" class="thatPadding btn navbar-btn button1 col-md-6 col-sm-6 col-xs-6">Sip</button></a>
+          <a href="/friends"><button type="button" class="thatPadding btn navbar-btn button1 col-md-6 col-sm-6 col-xs-6">Friends</button></a>
+  </nav>
 </div>
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src= "js/bootstrap.js"></script>

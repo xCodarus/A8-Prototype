@@ -4,7 +4,7 @@
 }
 
 .moveBottleUp {
-	margin-top: -30px;
+	margin-top: -10px;
 }
 
 .paddingThatArrow {
@@ -28,11 +28,12 @@
 
 .friend-list {
   height: 100%;
-  width: 90%;
+  width: 100%;
 }
 
 .pot {
-  margin-top: -10px;
+  margin-top: 0px;
+  height: 80%;
 }
 
 .friendContainer {
@@ -43,4 +44,31 @@
   width: 40%;
   height: 100%;
 
+}
+
+.plantChange {
+  display: inline-block;
+}
+
+.plantChange: hover {
+  background-color: yellow;
+}
+
+.shelf {
+  position: relative;
+  vertical-align: middle;
+  padding-bottom: 40px;
+  padding-top: 30px;
+
+}
+
+.prize {
+  position: absolute;
+  left: 35;
+  top: -140;
+  width: 90px;
+}
+
+body{
+    overflow-x:hidden;
 }
