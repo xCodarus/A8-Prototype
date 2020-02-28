@@ -7,6 +7,12 @@ exports.addFriend = function(request, response) { 
 						'growth': '0',
 						'isUser': false};
 		// json object (newFriend) is created
+	for (i=0; i < data.users.length; i++) {
+		if (data.users[i].name == newFriend.name) {
+			alert("User is already added!");
+			break;
+		}
+	}
 	data.users.push(newFriend);
 	response.render('friends', data);
 }
