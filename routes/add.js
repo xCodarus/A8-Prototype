@@ -2,6 +2,7 @@ var data = require("../users.json");
 
 exports.addFriend = function(request, response) {    
 	// Your code goes here
+	var friendCheck = false;
 	var newFriend = {'name': request.query.name,
 						'password': 'password',
 						'growth': '0',
@@ -9,11 +10,13 @@ exports.addFriend = function(request, response) { 
 		// json object (newFriend) is created
 	for (i=0; i < data.users.length; i++) {
 		if (data.users[i].name == newFriend.name) {
+			var friendCheck = true;
 			alert("User is already added!");
-			break;
 		}
 	}
-	data.users.push(newFriend);
-	response.render('friends', data);
+	if (friendCheck == false) {
+		data.users.push(newFriend);
+		response.render('friends', data);
+	}
 }
  
